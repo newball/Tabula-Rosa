@@ -138,5 +138,13 @@ function mytheme_trackback_comment($comment, $args, $depth) {
    	<li class="comment_line" id="comment-<?php comment_ID(); ?>"><?php comment_author_link(); ?></li>
 <?php }
 
+// Excerpt Design
+function tr_excerpt_more($post) {
+	global $post;
+	return ' ... <a href="'. get_permalink($post->ID) . '">' . 'Continue Reading' . '</a>';
+}
+add_filter('excerpt_more', 'tr_excerpt_more');
+
+
 
 ?>

@@ -10,6 +10,13 @@ For more information about the theme, visit http://leonewball.com/portfolio/tabu
 Changelog
 ---------
 Release Notes:
+1.0.4 - 4/20/11
+- Fixed: Search Error with Galleries
+- Added: Increased white spacing between posts to provide better readability
+
+1.0.3 - 04/20/11
+- Fixed: Minor WordPress Theme Standarization Issues
+- Fixed: Excerpt Design
 
 1.0.2 - 04/06/11
 - Fixed: Conflict with the WordTwit plugin, while creating a new post

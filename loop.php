@@ -40,9 +40,10 @@ while (have_posts()) : the_post(); ?>
 					the_content();
 				else:
 					$images = get_children(array('post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => -1));
-					$total_images = count($images);
-					$image = array_shift($images);
-					$image_img_tag = wp_get_attachment_image($image->ID, 'thumbnail');
+					if ($images) :
+						$total_images = count($images);
+						$image = array_shift($images);
+						$image_img_tag = wp_get_attachment_image($image->ID, 'thumbnail');
 				?>
 				<div class="gallery-thumb">
 					<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
@@ -51,9 +52,12 @@ while (have_posts()) : the_post(); ?>
 				endif; // ends checking for passwords
 
 				the_excerpt(); 
-				
+			
 				?>
+			<?php if ($images) : ?>
 				<p>This gallery has <em><?php echo $total_images; ?></em> images.</p>
+			<?php endif; ?>
+		<?php endif; ?>
 			</div>
 			<div class="post-metadata">
 				<p><strong>Date:</strong> <?php the_time('F jS, Y') ?> | <strong>Comments:</strong> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
@@ -129,10 +133,10 @@ while (have_posts()) : the_post(); ?>
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php edit_post_link('edit', '<p>', '</p>'); ?>
-				<div class="entry">
+				<blockquote class="entry">
 					<?php the_content('Continue Reading &raquo;'); ?>
-				</div>
-			<h2 class="posttitle"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				</blockquote>
+			<cite class="posttitle">Quoted: <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></cite>
 			<div class="post-metadata">
 				<p><strong>Date:</strong> <?php the_time('F jS, Y') ?> | <strong>Comments:</strong> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 				<p><strong>Category:</strong> <?php the_category(', ') ?></p>
@@ -182,7 +186,7 @@ while (have_posts()) : the_post(); ?>
 				</div>
 			<?php endif; ?>
 			<div class="post-metadata">
-				<p><strong>Date:</strong> <?php the_time('F jS, Y') ?> | <strong>Comments:</strong> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+				<p><strong>Date:</strong> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_time('F jS, Y') ?></a> | <strong>Comments:</strong> <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
 				<p><strong>Category:</strong> <?php the_category(', ') ?></p>
 				<?php the_tags('<p><strong>Tags:</strong> ', ', ', '</p>'); ?>
 			</div>

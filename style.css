@@ -3,7 +3,7 @@ Theme Name: Tabula Rosa
 Theme URI: http://leonewball.com/portfolio/tabula-rosa/
 
 Description: Tabula Rosa is a black and white, minimal, 2 column theme, with a fixed menu and header. The theme includes several, jQuery powered features such as a sliding vertical sub-menu's and lightbox galleries. The theme also features: Vertical Hover Dropdown menu, menu sub items slide down when mouse hovers over them; Widgets slide open and close when clicked on; WordPress 3.1 post-formatting for all 9 supported types; breadcrumb navigation; Integrated Search Bar; SEO Formatted page titles; Customizable Menu & Widgetized Sidebar; and Lightbox Galleries.
-Version: 1.0.2
+Version: 1.0.4
 Author: Leo Newball, Jr.
 Author URI: http://leonewball.com/
 Tags: black, white, fixed-width, threaded-comments, two-columns, custom-menu, left-sidebar, sticky-post, light
@@ -454,10 +454,8 @@ body {margin: 0; padding: 0;}
 .post,
 .page {
 	margin: 0 0 10px 5px;
-	padding: 0 5px;
+	padding: 0 5px 15px 5px;
 }
-
-.sticky {padding-bottom: 10px;}
 
 .post-author {padding-bottom: 4px;}
 
