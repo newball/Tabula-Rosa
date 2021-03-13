@@ -65,41 +65,41 @@ if ( is_home() || is_front_page() ) : // Home or Front Page
         <?php else : ?>
 			<h2 class="breadcrumb"><a href="<?php echo home_url(); ?>">Home</a> - 
 		<?php endif; ?>
-		<?php /* If this is a category archive */ if (is_category()) : ?>
-			<span class="underline"><?php single_cat_title(); ?></span> Category Archive</h2>
-		<?php /* If this is a tag archive */  elseif( is_tag() ) :?>
-			Posts Tagged <span class="underline"><?php single_tag_title(); ?></span></h2>
-		<?php /* If this is a daily archive */ elseif (is_day()) : ?>
-			Archive for <span class="underline"><?php the_time('F jS, Y'); ?></span></h2>
-		<?php /* If this is a monthly archive */ elseif (is_month()) : ?>
-			Archive for <span class="underline"><?php the_time('F, Y'); ?></span></h2>
-		<?php /* If this is a yearly archive */ elseif (is_year()) : ?>
-			Archive for <span class="underline"><?php the_time('Y'); ?></span></h2>
-		<?php /* If this is an author archive */ elseif (is_author()) : ?>
-			Author Archive</h2>
-		<?php /* If this is a paged archive */ elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
-			Blog Archives</h2>
-		<?php  /*If this is a search page */ elseif (is_search()) :  ?>
-			Search Results for: "<?php the_search_query(); ?>"</h2>
-		<?php /*If this is an error page */ elseif (is_404()) : ?>
-			Page Error: 404</h2>
-		<?php /* Breadcrumb */ elseif((is_single() || is_page()) && !is_front_page()) : ?>
-			<?php /* If it is a post-page, show the category */
-			if (is_single()) :
-				foreach((get_the_category()) as $category) {
-					echo '<a href="' . get_category_link($category->cat_ID) . '" title="' . $category->cat_name . '">';
-					echo $category->cat_name;
-					echo '</a>';
-					echo ' - ';
-				}
-			endif;
-			single_post_title();
-			?>
-			</h2>
+			<?php /* If this is a category archive */ if (is_category()) : ?>
+				<span class="underline"><?php single_cat_title(); ?></span> Category Archive
+			<?php /* If this is a tag archive */  elseif( is_tag() ) :?>
+				Posts Tagged <span class="underline"><?php single_tag_title(); ?></span>
+			<?php /* If this is a daily archive */ elseif (is_day()) : ?>
+				Archive for <span class="underline"><?php the_time('F jS, Y'); ?></span>
+			<?php /* If this is a monthly archive */ elseif (is_month()) : ?>
+				Archive for <span class="underline"><?php the_time('F, Y'); ?></span>
+			<?php /* If this is a yearly archive */ elseif (is_year()) : ?>
+				Archive for <span class="underline"><?php the_time('Y'); ?></span>
+			<?php /* If this is an author archive */ elseif (is_author()) : ?>
+				Author Archive
+			<?php /* If this is a paged archive */ elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
+				Blog Archives
+			<?php  /*If this is a search page */ elseif (is_search()) :  ?>
+				Search Results for: "<?php the_search_query(); ?>"
+			<?php /*If this is an error page */ elseif (is_404()) : ?>
+				Page Error: 404
+			<?php /* Breadcrumb */ elseif((is_single() || is_page()) && !is_front_page()) : ?>
+				<?php /* If it is a post-page, show the category */
+				if (is_single()) :
+					foreach((get_the_category()) as $category) {
+						echo '<a href="' . get_category_link($category->cat_ID) . '" title="' . $category->cat_name . '">';
+						echo $category->cat_name;
+						echo '</a>';
+						echo ' - ';
+					}
+				endif;
+				single_post_title();
+				?>
+				</h2>
 		<?php endif; ?>
+			</h2>
 		</div>
 		<?php get_search_form(); ?>
 	</div>
-
 
 <div id="wrapper">

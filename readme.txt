@@ -10,12 +10,23 @@ For more information about the theme, visit http://leonewball.com/portfolio/tabu
 Changelog
 ---------
 Release Notes:
-1.0.4 - 4/20/11
+1.0.6 - 05/08/11
+- Fixed: Overflow problems, with floating elements in the post content, interfering with the comment section
+- Fixed: Attachment's did not display properly, in popups
+- Corrected: Spelling in changelog (spell-check can be my friend!)
+
+1.0.5 - 05/07/11
+- Code Cleanup from previous version, CSS Standardization
+- Fixed: Formatting issue where posts and pages were moved 10 pixels to the right and 5 pixels down (Thanks to Vendant for pointing this out)
+- Fixed: Placement of reply and edit links in comments
+- Removed: Support for IE 6
+
+1.0.4 - 04/20/11
 - Fixed: Search Error with Galleries
 - Added: Increased white spacing between posts to provide better readability
 
 1.0.3 - 04/20/11
-- Fixed: Minor WordPress Theme Standarization Issues
+- Fixed: Minor WordPress Theme Standardization Issues
 - Fixed: Excerpt Design
 
 1.0.2 - 04/06/11
@@ -48,7 +59,7 @@ Release Notes:
 
 - New Feature: A “no title” version of the page template, aimed for those who wish static front pages without a page title. Removed frontpage.php in for this feature.
 - New Feature: A lightbox powered page template, aimed specifically for those who use galleries on their pages. Uses the Fancybox jQuery add-on
-- Fixed: changelog dates. Time traveling was occuring during development.
+- Fixed: changelog dates. Time traveling was occurring during development.
 - Fixed: Page titles, were not properly formatted.
 - Change: Formatting of release notes. Only including most recent revision of notes. Full notes available on theme page: leonewball.com/portfolio/tabula-rosa/
 

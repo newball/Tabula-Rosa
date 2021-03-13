@@ -16,7 +16,7 @@ function menuSlide() {
 
 		$j(this).parent().hover(function() {
 		}, function(){
-			$j(this).parent().find("ul.children, ul.sub-menu").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+			//$j(this).parent().find("ul.children, ul.sub-menu").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
 		});
 
 	});

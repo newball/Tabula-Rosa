@@ -3,7 +3,7 @@ Theme Name: Tabula Rosa
 Theme URI: http://leonewball.com/portfolio/tabula-rosa/
 
 Description: Tabula Rosa is a black and white, minimal, 2 column theme, with a fixed menu and header. The theme includes several, jQuery powered features such as a sliding vertical sub-menu's and lightbox galleries. The theme also features: Vertical Hover Dropdown menu, menu sub items slide down when mouse hovers over them; Widgets slide open and close when clicked on; WordPress 3.1 post-formatting for all 9 supported types; breadcrumb navigation; Integrated Search Bar; SEO Formatted page titles; Customizable Menu & Widgetized Sidebar; and Lightbox Galleries.
-Version: 1.0.4
+Version: 1.0.6
 Author: Leo Newball, Jr.
 Author URI: http://leonewball.com/
 Tags: black, white, fixed-width, threaded-comments, two-columns, custom-menu, left-sidebar, sticky-post, light
@@ -20,10 +20,9 @@ Color Scheme - colors, borders & their colors
 
 */
 
-#header-wrapper {background-color: #FFF;}
-
 #left-col {border-right: 1px solid #aeaeae;}
 
+/* Text Colors */
 .posttitle {color: #111;}
 
 .wp-caption {background-color: #FFFFFF;}
@@ -36,22 +35,30 @@ Color Scheme - colors, borders & their colors
 
 blockquote {background: url('images/quote.png') top left no-repeat;}
 
+/* Post Specific */
+
+.sticky {
+	border-top: 1px solid #cacaca;
+	border-bottom: 5px solid #000;
+	background-color: #f3f3f3;
+}
+
+.format-chat .entry {
+	background-color: #eee;
+}
+
+/* Form Specific */
 .error404 #right-col select {border: 1px solid #000; color: #FFF; background-color: black;}
 
 #searchform {
 	border: 1px solid #000;
 	background-color: #fff;
-	}
-	
-.post-pages-navigation a {
-	border: 1px solid #a3a3a3;
-	background-color: #f3f3f3;
-	padding: 3px 8px;
-	margin: 0 3px;
 }
 
+/* Comment Specific */
 #commentform label,
-#commentform .required {color: #a3a3a3;}
+#commentform .required
+{color: #a3a3a3;}
 
 #comment-text,
 #author,
@@ -60,102 +67,83 @@ blockquote {background: url('images/quote.png') top left no-repeat;}
 #submit
 {border: 1px solid #aeaeae; background-color: white;}
 
-.sticky {
-	border-top: 1px solid #cacaca;
-	border-bottom: 5px solid #000;
-	background-color: #f3f3f3;
-}
+.comment-form-comment textarea {border: 1px solid #777;}
+
+#comment-responses .comment {border: 1px solid #aeaeae; background-color: #f4f4f4;}
+
+/* If you wish to have a different color, for each comment response follow these steps:
+1. remove "background-color: #f4f4f4" from above
+2. Uncomment this section
+.depth-1 {background-color: #f0f0f0 !important;}
+
+.depth-2 {background-color: #f4f4f4 !important; }
+
+.depth-3 {background-color: #fafafa !important; }
+
+.depth-4 {background-color: #fcfcfc !important; }
+
+.depth-5 {background-color: #fefefe !important;}
+
+*/
+	
+.bypostauthor {background-color: #B7DFEB !important;}
 
 /* Links */
 
 a {text-decoration: none;}
 
-.entry a {font-style: italic; font-weight: bold;}
+a img {border: none;}
 
 #blog-title a {color: white;}
 
 .breadcrumb a {color: inherit;}
 
-.posttitle a {
-	color: #111 !important; /* Blah this is an ugly hack to fix IE issues*/
-	text-decoration: none; 
-	}
+#menu a,
+.children a,
+.sub-menu a
+{color: #3c3c3c; text-decoration: none;}
 
-a img {border: none;}
+#menu a:hover {color: black;}
 
-#sidebar a:link,
-#sidebar a:visited,
-#right-col a:link,
-#right-col a:visited,
-#footer a:link,
-#footer a:visited
+#sidebar a:link,	#sidebar a:visited,
+#right-col a:link,	#right-col a:visited,
+#footer a:link,		#footer a:visited
 {color: #003366;}
 
-#sidebar a:hover,
-#sidebar a:active,
-#right-col a:hover,
-#right-col a:active,
-#footer a:link,
-#footer a:active
+#sidebar a:hover, 	#sidebar a:active,
+#right-col a:hover,	#right-col a:active,
+#footer a:link, 	#footer a:active
 {color: #5588BB;}
 
 .widgettitle a {color: black !important;}
 
+.posttitle a {
+	color: #111 !important; /* Blah this is an ugly hack to fix IE issues*/
+	text-decoration: none; 
+}
+
+.entry a {font-style: italic; font-weight: bold;}
+
 .more-link {display: block;}
 
-.navigation a {
-	font-style: italic;
-	color: #373636 !important;
-	}
+.navigation a {font-style: italic; color: #373636 !important;}
 
-#wp-calendar a {
-	font-weight: bold;
-	color: #000 !important;
-	}
-	
-#wp-calendar a:hover {text-decoration: underline;}
-
-#menu a,
-.children a,
-.sub-menu a
- {color: #3c3c3c; text-decoration: none;}
-
-#menu a:hover {color: black;}
+.post-pages-navigation a {
+	border: 1px solid #a3a3a3;
+	background-color: #f3f3f3;
+	padding: 3px 8px;
+	margin: 0 3px;
+}
 
 .post-edit-link {background-color: black; color: white !important;}
 
-/* Comments */
-
-.comment-form-comment textarea {border: 1px solid #777;}
-
-#comment-responses .comment {border: 1px solid #aeaeae; background-color: #f4f4f4;}
-
-.depth-1 {background-color: #f4f4f4;}
-
-.depth-2 {
-	
-	}
-
-.depth-3 {
-	}
-
-.depth-4 {
-		}
-
-.depth-5 {
-		}
-	
-.bypostauthor {background-color: #B7DFEB;}
-
 .comment-edit-link,
-.comment-reply-link {
-	border: 1px solid #aeaeae;
-	background-color: #fff;
-	}
+.comment-reply-link
+{border: 1px solid #aeaeae; background-color: #fff;}
 
-.format-chat .entry {
-	background-color: #eee;
-	}
+#wp-calendar a {font-weight: bold; color: #000 !important;}
+	
+#wp-calendar a:hover {text-decoration: underline;}
 
 /*
 
@@ -166,19 +154,44 @@ Base font is set to 16px
 Base font for entry is 14px
 
 */
-html {font-size: 100%} /* Silly IE 6 */
-
 body {font-size: 1em; font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;}
 
 .entry,
-.page_navigation,
-.commentlist,
-.comment_notice,
-.nocomments,
-.navigation,
-#commentform label,
+.page_navigation, 
+.commentlist, 
+.comment_notice, 
+.nocomments, 
+.navigation, 
+#commentform label, 
 #commentform .required
 {font-size: .875em; line-height: 1.285em;}
+
+input,
+textarea
+{font-size: 1em; font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;}
+
+small, #footer
+{font-size: .625em;}
+
+blockquote {
+	text-align: justify;
+	padding: 18px 25px 5px 35px;
+	margin: 0;
+	font-style: italic;
+}
+
+code {font-family: Courier, monospace; font-weight: bold;}
+
+pre {
+	display: block;
+	font-family: Courier, monospace;
+	padding: 5px 10px 5px 10px;
+	margin: 10px 0 10px 0;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.error {text-align: center;}
 
 /* headers */
 
@@ -201,34 +214,30 @@ body {font-size: 1em; font-family: "Palatino Linotype", "Book Antiqua", "Palatin
 }
 
 .entry h1,
-.posttitle {font-size: 2em; line-height: 1.5em} /* roughly 28px; */
+.posttitle
+{font-size: 2em; line-height: 1.5em} /* roughly 28px; */
+
 .entry h2 {font-size: 1.857em; line-height: 1.5em} /* roughly 26px */
-.entry h3 {font-size: 1.714em; line-height: 1.5em} /* roughly 24px */
-.entry h4 {font-size: 1.429em; line-height: 1.5em} /* roughly 20px */
-.entry h5 {font-size: 1.142em; line-height: 1.5em} /* roughly 16px */
-.entry h6 {font-size: 1em; line-height: 1.5em} /* 14px */
-
-.widgettitle {font-size: 1.25em; padding: 0 0 5px 0; margin: 0;} /* 20px */
-
 .error404 #right-col h2 {font-style: italic;}
+
+.entry h3 {font-size: 1.714em; line-height: 1.5em} /* roughly 24px */
+.widgettitle {font-size: 1.25em; padding: 0 0 5px 0; margin: 0;} /* 20px */
 
 #comments-title,
 #reply-title,
 #trackbacks-title
 {font-size: 1.142em; margin: 10px 0 0 0;}
 
-/* html tags & sections */
-input,
-textarea
-{font-size: 1em; font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;}
+.entry h4 {font-size: 1.429em; line-height: 1.5em} /* roughly 20px */
 
-small,
-#footer
-{font-size: .625em;}
+.entry h5 {font-size: 1.142em; line-height: 1.5em} /* roughly 16px */
 
-pre {font-family: Courier, monospace; font-size: 1em;}
+.entry h6 {font-size: 1em; line-height: 1.5em} /* 14px */
 
-/* sidebar items */
+
+/* Sidebar Items */
+
+#left-col {text-align: right;}
 
 .menu-item,
 .page_item
@@ -253,10 +262,7 @@ pre {font-family: Courier, monospace; font-size: 1em;}
 
 #sidebar ul li {font-size: .8em;}
 
-/* Specific Elements */
-
-.post-metadata {font-size: .714em; text-transform:lowercase;} /* 10px */
-
+/* Navigation */
 .breadcrumb {
 	font-size: .9em;
 	font-style: italic;
@@ -264,6 +270,27 @@ pre {font-family: Courier, monospace; font-size: 1em;}
 	color: #7e7e7e;
 	font-weight: normal;
 }
+
+.navigation {width: 550px; text-align: center;}
+
+#comment-wrapper .navigation {text-align: left;}
+
+.page-numbers {padding-left: 4px; padding-right: 4px;}
+
+.navigation .prev {padding-left: 0;}
+
+.navigation .next {padding-right: 0;}
+
+.page-numbers.current {font-size: 1.25em;} /* Just chose a quarter size higher of the current font size - I got math lazy */
+
+.post-pages-navigation {
+	font-style: italic;
+	font-size: 1.25em;
+}
+
+/* Post Elements */
+
+.post-metadata {font-size: .714em; text-transform:lowercase;} /* 10px */
 
 .pageSection,
 .blogroll-title,
@@ -277,83 +304,45 @@ pre {font-family: Courier, monospace; font-size: 1em;}
 	font-size: .857em; /* Roughtly 12px */
 }
 
-.navigation {width: 550px; text-align: center;}
-
-#comment-wrapper .navigation {text-align: left;}
-
-.page-numbers {padding-left: 4px; padding-right: 4px;}
-.navigation .prev {padding-left: 0;}
-.navigation .next {padding-right: 0;}
-.page-numbers.current {font-size: 1.25em;} /* Just chose a quarter size higher of the current font size - I got math lazy */
-
-blockquote {
-	text-align: justify;
-	padding: 18px 25px 5px 35px;
-	margin: 0;
-	font-style: italic;
-}
-
-code {
-	font-family: Courier, monospace;
-	font-weight: bold;
-	}
-
-pre {
-	display: block;
-	font-family: Courier, monospace;
-	padding: 5px 10px 5px 10px;
-	margin: 10px 0 10px 0;
-	font-weight: bold;
-	font-size: .9em;
-	}
-
-.logged-in-as {
-	font-style: italic;
-	font-size: .9em;
-	}
-
-.logged-in-as a {font-weight: bold;}
-
 .post-author {font-size: .8em; font-style: italic;}
 
+.underline {text-decoration: underline;}
+
+/* Comment Elements */
 #comment-trackbacks .commentlist {font-size: .9em;}
 
 #comment-responses {border-right: 1px solid #aeaeae;}
 
-.underline {text-decoration: underline;}
+.logged-in-as {
+	font-style: italic;
+	font-size: .9em;
+}
+
+.logged-in-as a {font-weight: bold;}
+
+/* Form Elements */
 
 #searchform {
 	font-size: .8em;
 	font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
-	}
+}
 
 .error404 select {
 	font-size: .8em;
 	font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
-	}
-
-.error {text-align: center;}
+}
+	
 .error #searchform {font-size: 1.5em;}
 
+/* Links */
 .comment-edit-link,
-.comment-reply-link {
-	font-size: .9em;
-	text-transform: lowercase;
-}
+.comment-reply-link
+{font-size: .9em; text-transform: lowercase;}
 
-.post-edit-link {
-	font-size: 1.25em;
-	font-style: italic;}
-
-.post-pages-navigation {
-	font-style: italic;
-	font-size: 1.25em;
-}
+.post-edit-link {font-size: 1.25em;	font-style: italic;}
 
 /* Post Formats */
-.format-chat .entry {
-	font-family: "Courier", monospace;
-	}
+.format-chat .entry {font-family: "Courier", monospace;}
 
 /*
 
@@ -363,7 +352,6 @@ Design & Position - Design and position
 */
 body {margin: 0; padding: 0;}
 
-/* Base Design */
 #header{
 	top: 25px; 
 	right: 0;
@@ -371,19 +359,19 @@ body {margin: 0; padding: 0;}
 	position: fixed;
 }
 
-#wrapper {padding-top: 115px; width: 1000px;}
+#wrapper {padding: 115px 0 0 0; margin: 0; width: 1000px;}
 
 #left-col {
 	position: fixed;
 	float: left;
-	text-align:  right;
 	padding: 0 10px 0 0; margin: 0;
-	width: 250px;
+	width: 250px; min-width: 250px;
 	height: 75%; min-height: 600px;
 }
 
 #right-col {
-	margin: 0 0 0 265px;
+	position: relative;
+	left: 265px;
 	min-height: 800px;
 	padding-left: 0;
 }
@@ -392,31 +380,27 @@ body {margin: 0; padding: 0;}
 	text-align: center;
 	width: 750px;
 	clear: both;
-	margin-left: 250px;
+	position: relative;
+	left: 265px;
 	padding: 5px 0 30px 0;
 }
 
 
+/* Specific Page Elements and Post Formats */
+
 /* 
--- Specific Page and Post Types
+-- Attachment.php Pages
 */
+.single-attachment #wrapper {margin: 0 auto;}
 
-/* Attachment.php Pages */
-.single-attachment #wrapper {
-	margin: 0 auto;}
+#right-col.attachment {left: 0;}
 
-#right-col.attachment {
-	margin: 0;
-}
+.attachment .entry {margin: 0 auto;	width: 600px;}
 
-.attachment .entry {
-	margin: 0 auto;
-	width: 600px;}
-
-/* Handling Fancybox loading of attachment pages */
-#fancybox-content #header {
-	display: none;
-	}
+/*
+-- Handling Fancybox loading of attachment pages
+*/
+#fancybox-content #header {display: none;}
 
 #fancybox-content #wrapper {
 	padding: 0;
@@ -424,15 +408,13 @@ body {margin: 0; padding: 0;}
 	margin: 0 auto;
 }
 
-#fancybox-content #footer {
-	display: none;
-	}
+#fancybox-content #footer {display: none;}
 
-#fancybox-content .navigation {
-	display: none;}
+#fancybox-content .navigation {display: none;}
 
-
-/* Header Elements */
+/*
+-- Header Elements
+*/
 .menu-item,
 .page_item 
 {
@@ -451,11 +433,9 @@ body {margin: 0; padding: 0;}
 
 /* Content and Post Elements */
 
-.post,
-.page {
-	margin: 0 0 10px 5px;
-	padding: 0 5px 15px 5px;
-}
+#right-col .post,
+#right-col .page
+{margin: 0 0 10px 5px; padding: 0 5px 15px 5px;}
 
 .post-author {padding-bottom: 4px;}
 
@@ -474,7 +454,7 @@ img.alignright {
 	margin: 0 0 7px 7px;
 	display: inline;
 	float: right;
-	}
+}
 
 .nav-previous,
 .alignleft,
@@ -483,38 +463,28 @@ img.alignleft {
 	margin: 0 7px 7px 0;
 	display: inline;
 	float: left;
-	}
+}
 
 .aligncenter,
 img.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	}
-
-.wp-caption .aligncenter {
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
-.gallery-caption
-{margin-top: 4px;}
+.wp-caption .aligncenter {margin-top: 10px;	margin-bottom: 10px;}
+
+.gallery-caption {margin-top: 4px;}
 
 .wp-caption img {padding: 5px;}
 
 .gallery-thumb,
-.wp-post-image { /* To ensure it only appears on the front page */
-	float: left; margin: 0 15px 5px 0;}
+.wp-post-image 
+{ /* To ensure it only appears on the front page */ float: left; margin: 0 15px 5px 0;}
 
-#right-col img {
-	height: auto;
-	max-width: 100%;
-}
+#right-col img {height: auto; max-width: 100%;}
 
-.post-pages-navigation {
-	clear: both;
-	text-align: center;
-}
+.post-pages-navigation {clear: both; text-align: center;}
 
 /* WordPress/Blog Specific Elements */
 
@@ -524,7 +494,7 @@ img.aligncenter {
 	margin: 0 0 5px 0; padding: 10px 0 10px 0;
 	height: 15px;
 	width: 100%;
-	}
+}
 
 .blogroll {margin: 0; padding: 0;}
 
@@ -532,13 +502,13 @@ img.aligncenter {
 
 /* Comments */
 
-/* Note: I turn really lazy in trying to measure things here, so going to use % for the win! */
+/* Note: I became really lazy in trying to measure things here, so going to use % for the win! */
 
 .comment-form-comment { 
 	width: 50%;
 	margin-right: 1%;
 	padding-top: 2px; /* Done for alignment with input forms*/
-	}
+}
 
 .comment-form-author,
 .comment-form-email,
@@ -546,7 +516,7 @@ img.aligncenter {
 	width: 47%;
 	float: right;
 	clear: right;
-	}
+}
 
 .comment-form-comment textarea,
 .comment-form-author input,
@@ -554,7 +524,7 @@ img.aligncenter {
 .comment-form-url input {
 	display: block; /* This isn't needed for text area, but I don't feel like handling with redunant code.. */
 	width: 100%; /* need to strech the element across the width of the comment container... and I'm being lazy */
-	} 
+} 
 
 .form-submit {margin: 0; clear: both; display: block;}
 
@@ -564,42 +534,43 @@ img.aligncenter {
 .comment-form-submit
 {margin: 2px 0;}
 
-
 .comment-author cite {display: block;}
 
 .avatar {
 	float: right;
 	border: 1px solid #aeaeae;
-	padding: 3px;}
+	padding: 3px;
+}
+
+.vcard {position: relative;}
 
 .comment-edit-link {
-	float: right;
-	position: relative;
-	top: 42px;
-	right: -40px;
+	position: absolute;
+	top: 68px;
+	right: 0;
 	width: 29px;
 	padding: 1px 2px 1px 7px;
-	}
+}
+
 .comment-reply-link {
-	float: right;
-	position: relative;
-	top: 66px;
-	right: -80px;
+	position: absolute;
+	top: 43px;
+	right: 0;
 	padding: 1px 4px 1px 5px;
-	}
+}
 
 .comment-entry {padding-top: 5px; clear: both;}
 
-#comment-reply {}
-
-#comment-wrapper {clear: both;}
+#comment-reply,
+#comment-wrapper
+{clear: both;}
 
 #comment-responses {
 	float: left;
 	width: 480px;
 	margin: 0;
 	padding: 0 10px 0 0;
-	}
+}
 	
 #comment-trackbacks {margin: 0 0 0 500px; padding: 0;}
 
@@ -612,7 +583,7 @@ img.aligncenter {
 	margin-bottom: 5px;
 	padding: 7px;
 	list-style: none;
-	}
+}
 
 /* Sidebar Design */
 
@@ -623,15 +594,9 @@ img.aligncenter {
 .widgettitle + div 
 {display: none;} /* Created so widgets could drop down on touch */
 
-.plus {
-	padding-right: 18px;
-	background: url('images/plus.png') right 40% no-repeat;
-	}
+.plus {padding-right: 18px;	background: url('images/plus.png') right 40% no-repeat;}
 
-.minus {
-	padding-right: 18px;
-	background: url('images/minus.png') right 40% no-repeat;
-	}
+.minus {padding-right: 18px; background: url('images/minus.png') right 40% no-repeat;}
 
 #wp-calendar {margin-left: 100px;}
 
@@ -657,14 +622,14 @@ ol li, #sidebar ol {list-style: decimal outside;} /* I don't quite know when num
 	padding: 0;
 	margin: 0;
 	width: 250px;
-	}
+}
 
 #s {
 	margin: 0;
 	border: none;
 	width: 169px;
 	padding: 0 3px;
-	}
+}
 
 #searchsubmit {
 	border: none;
@@ -676,28 +641,29 @@ ol li, #sidebar ol {list-style: decimal outside;} /* I don't quite know when num
 	font-weight: bold;
 	width: 75px;
 	height: 20px;
-	}
+}
 
-#header #searchform {float: right;} /* Header Formatting */
+#header #searchform {float: right;} /* Header Search Form */
 
-/* - For the Search Error Pages If Nothing Is Found - */
+/*
+--For the Search Error Pages If Nothing Is Found
+*/
 .error #searchform {
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
 	width: 600px;	
-	}
+}
 	
 .error #s {
 	height: 40px;
 	width: 444px;
-	}
+}
 	
 .error #searchsubmit {
 	height: 40px;
 	width: 150px;
-	}
-
+}
 
 /* Page Specific */
 
@@ -706,7 +672,7 @@ ol li, #sidebar ol {list-style: decimal outside;} /* I don't quite know when num
 	padding: 0;
 	margin: 0;
 	width: 250px;
-	}
+}
 	
 .post-edit-link {
 	position: relative;
@@ -716,4 +682,4 @@ ol li, #sidebar ol {list-style: decimal outside;} /* I don't quite know when num
 	width: 31px;
 }
 
-/* Line 711 - Almost Evil! */
+/* Line 688 - Almost Evil! */
